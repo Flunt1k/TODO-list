@@ -72,11 +72,9 @@ function checkTODOBlock(){
     let currentBlock = this.parentNode;
     if(this.checked){
         currentBlock.childNodes[7].disabled = true;
-        currentBlock.childNodes[9].disabled = true;
         currentBlock.style.backgroundColor = '#c2c2d6';
     } else {
         currentBlock.childNodes[7].disabled = false;
-        currentBlock.childNodes[9].disabled = false;
         currentBlock.style.backgroundColor = '#fff';
     }
 }
