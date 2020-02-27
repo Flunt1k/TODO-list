@@ -11,6 +11,8 @@ let save;
 function addNewTODO(input) {
     counter++;
     let copyElement = item.cloneNode(true);
+    copyElement.childNodes[1].checked = false;
+    copyElement.removeAttribute('style');
     let inputBlock = copyElement.childNodes[3];
     let editButton = copyElement.childNodes[7];
     let deleteButton = copyElement.childNodes[9];
@@ -70,7 +72,7 @@ function deleteTODOBlock(){
 
 function checkTODOBlock(){
     let currentBlock = this.parentNode;
-    if(this.checked){
+    if(this.checked ){
         currentBlock.childNodes[7].disabled = true;
         currentBlock.style.backgroundColor = '#c2c2d6';
     } else {
